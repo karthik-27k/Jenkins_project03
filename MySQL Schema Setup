@@ -1,0 +1,14 @@
+CREATE DATABASE jenkins_pipeline_db;
+
+USE jenkins_pipeline_db;
+
+CREATE TABLE jenkins_builds (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  user VARCHAR(255),
+  job_name VARCHAR(255),
+  build_number INT,
+  version VARCHAR(50),
+  timestamp DATETIME,
+  result VARCHAR(50),
+  stages_count INT
+);
